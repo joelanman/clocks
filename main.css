@@ -3,6 +3,12 @@ html,body{
 	margin: 0;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-family: 'Roboto', sans-serif;
+	background: #111;
+}
+
+input{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .clocks{
@@ -56,6 +62,14 @@ html,body{
 }
 */
 
+.clocks{
+
+}
+
+.clocks.background{
+  -webkit-filter: brightness(0.9) blur(4px);
+}
+
 .clockWrap{
 	height: 100%;
 	float: left;
@@ -84,4 +98,37 @@ html,body{
 
 .clock span{
 	margin: 0 -0.1em;
+}
+
+.controls{
+	z-index: 1000;
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	background: rgba(255,255,255,0.96);
+	width: 8em;
+	height: 90%;
+	color: #999;
+	font-size: 4em;
+	text-align: center;
+}
+
+.controls input{
+	font-size: 1em;
+	padding: 0.1em;
+	width: 67%%;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	background: none;
+}
+
+.controlsInner{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+
 }
