@@ -60,7 +60,7 @@ html,body{
 	height: 100%;
 	float: left;
 	width: 50%;
-	background: #000;
+	background: #336;
 	color: #FFF;
 	text-align: center;
 	position: relative;
@@ -68,12 +68,10 @@ html,body{
 
 .clock{
 	position: absolute;
-	border-radius: 80em;
 	top: 50%;
 	left: 50%;
 	white-space: nowrap;
 	-webkit-transform: translate(-50%,-50%);
-	padding: 5em;
 }
 
 .clock .time{
