@@ -65,11 +65,11 @@ input{
 .clocks{
 
 }
-/*
+
 .clocks.background{
-  -webkit-filter: brightness(0.9) blur(4px);
+  -webkit-filter: blur(2px);
 }
-*/
+
 .clockWrap{
 	height: 100%;
 	float: left;
