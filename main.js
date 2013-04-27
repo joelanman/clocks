@@ -2,13 +2,13 @@
 $(".dial").knob({
 	min: 0,
 	max: 1440,
-	width: 300,
-	height: 300,
+	width: 330,
+	height: 330,
 	lineCap: "round",
 	cursor: true,
 	fgColor: "#999",
 	bgColor: "#EEE",
-	thickness: 0.2,
+	thickness: 0.28,
 
 
     'change' : function (v) {
