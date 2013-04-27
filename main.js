@@ -22,15 +22,20 @@ $(".dial").knob({
 $('.clockWrap').on('click touchstart', function(e){
 	e.preventDefault();
 
-	var hours = Number($(this).find('.hours').text()),
-		minutes = Number($(this).find('.minutes').text()),
-		totalMins = hours*60 + minutes;
+	var $this = $(this);
+
+	var hours 		= Number($this.find('.hours').text()),
+		minutes 	= Number($this.find('.minutes').text()),
+		totalMins 	= hours*60 + minutes,
+		location 	= $this.find('.location').text();
 
 	console.log(totalMins);
 
 	$(".dial").val(totalMins).trigger('change');
  
  	$('.clockDisplay').val(hours + ':' + minutes);
+
+ 	$('.locationEdit input').val(location);
 
 	$('#controlsWrap').fadeIn('fast');
 })
