@@ -67,7 +67,7 @@ input{
 }
 
 .clocks.background{
-  -webkit-filter: brightness(80%);
+  -webkit-filter: brightness(-80%);
 }
 
 .clockWrap{
