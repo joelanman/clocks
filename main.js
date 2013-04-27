@@ -19,23 +19,28 @@ $(".dial").knob({
     }
 });
 
-setTimeout(function(){
+$('.clockWrap').on('click touchstart', function(e){
+	e.preventDefault();
 
-		var v = $('.dial').val();
-    	var hours = Math.floor(v/60),
-    		minutes = v%60;
-    	minutes = (minutes < 10) ? '0' + minutes : minutes;
-    	$('.clockDisplay').val(hours + ':' + minutes);
+	var hours = Number($(this).find('.hours').text()),
+		minutes = Number($(this).find('.minutes').text()),
+		totalMins = hours*60 + minutes;
 
-}, 100);
+	console.log(totalMins);
 
-$('.clockWrap,#controlsWrap').on('click touchstart', function(e){
+	$(".dial").val(totalMins).trigger('change');
+ 
+ 	$('.clockDisplay').val(hours + ':' + minutes);
+
+	$('#controlsWrap').fadeIn('fast');
+})
+
+$('#controlsWrap').on('click touchstart', function(e){
 	e.preventDefault();
 
 	if ($(e.target).closest('.controls').length == 1){
 		return;
 	}
 
-	$('#controlsWrap').toggle();
-	$('#clocks').toggleClass('background');
+	$('#controlsWrap').fadeOut('fast');
 })
