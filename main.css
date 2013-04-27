@@ -67,7 +67,6 @@ input{
 }
 
 .clocks.background{
-  -webkit-filter: brightness(0.5);
 }
 
 .clockWrap{
@@ -100,9 +99,18 @@ input{
 	margin: 0 -0.1em;
 }
 
+.controlsWrap{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	display: none;
+}
+
 .controls{
 	z-index: 1000;
-	display: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;

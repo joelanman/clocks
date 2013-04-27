@@ -29,8 +29,8 @@ setTimeout(function(){
 
 }, 100);
 
-$('.clockWrap').on('click touchstart', function(e){
+$('.clockWrap,#controlsWrap').on('click touchstart', function(e){
 	e.preventDefault();
-	$('#controls').toggle();
+	$('#controlsWrap').toggle();
 	$('#clocks').toggleClass('background');
 })
