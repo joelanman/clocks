@@ -13,6 +13,7 @@
 		<div id="clocks" class="clocks">
 
 			<div class="clockWrap" style="background: #69E">
+				<a href="#" class="remove">-</a>
 				<div class="clock">
 					<div class="time">
 						<span class="hours">10</span>
@@ -24,6 +25,7 @@
 			</div>
 
 			<div class="clockWrap" style="background: #119">
+				<a href="#" class="remove">-</a>
 				<div class="clock">
 					<div class="time">
 						<span class="hours">16</span>
@@ -51,7 +53,26 @@
 		</div>
 
 		<div class="menu">
-			<a href="#" class="add">+</a>
+			<a href="#" id="addClock" class="addClock">+</a>
+		</div>
+
+		<div id="templates">
+			
+			<div id="clockTemplate">
+				
+			<div class="clockWrap">
+				<a href="#" class="remove">-</a>
+				<div class="clock">
+					<div class="time">
+						<span class="hours"></span>
+						<span class="separator">:</span>
+						<span class="minutes"></span>
+					</div>
+					<div class="location"></div>
+				</div>
+			</div>
+			</div>
+
 		</div>
 
 	</body>
