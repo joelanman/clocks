@@ -57,9 +57,14 @@ $('#controlsWrap').on('click touchstart', function(e){
 $('#addClock').on('click touchstart', function(e){
 	e.preventDefault();
 
-	var newClock = $($('#clockTemplate').html().trim()).clone();
+	var $newClock = $($('#clockTemplate').html().trim()).clone();
 
-	newClock.appendTo('#clocks');
+	$newClock.find('.hours').text('8');
+	$newClock.find('.minutes').text('41');
+	$newClock.find('.location').text('Paris');
+
+
+	$newClock.appendTo('#clocks');
 
 	drawClocks();
 });
