@@ -19,8 +19,12 @@ $(".dial").knob({
     }
 });
 
-$('.clockWrap').on('click touchstart', function(e){
+$('body').on('click touchstart', '.clockWrap', function(e){
 	e.preventDefault();
+
+	if ($(e.target).closest('.remove').length == 1){
+		return;
+	}
 
 	var $this = $(this);
 
@@ -63,12 +67,16 @@ $('#addClock').on('click touchstart', function(e){
 var drawClocks = function(){
 	var totalClocks = $('#clocks .clock').length;
 
+	if (totalClocks == 1){
+		$('.clockWrap').css({'width':'100%', 'height':'100%'});
+	}
+
 	if (totalClocks == 2){
 		$('.clockWrap').css({'width':'50%', 'height':'100%'});
 	}
 
 	if (totalClocks == 3){
-		$('.clockWrap').css({'width':'33%', 'height':'100%'});
+		$('.clockWrap').css({'width':'33.33%', 'height':'100%'});
 	}
 
 	if (totalClocks == 4){
