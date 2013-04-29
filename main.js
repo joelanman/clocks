@@ -7,10 +7,10 @@ var cities = [
 		'difference': -7
 	},
 	{	'name'		: 'Tokyo',
-		'difference': +8
+		'difference': 8
 	},
 	{	'name'		: 'Paris',
-		'difference': +1
+		'difference': 1
 	}
 ]
 
@@ -148,3 +148,31 @@ $('body').on('mousemove', function(e){
 	}, 2000);
 
 });
+
+setInterval(function(){
+
+	var date = new Date(),
+		hours = date.getHours(),
+		minutes = date.getMinutes();
+
+	$('.clock').each(function(){
+
+		var $this = $(this),
+			cityName = $this.find('.location').text(),
+			difference = 0;
+
+		cities.forEach(function(city){
+			if (city.name == cityName){
+				difference = city.difference;
+			}
+		});
+
+		var cityHours = hours + difference;
+
+		cityHours = (cityHours >= 24) ? cityHours - 24 : cityHours;
+
+		$this.find('.hours').text(cityHours);
+		$this.find('.minutes').text(minutes);
+	})
+
+}, 1000);
