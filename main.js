@@ -2,8 +2,8 @@
 $(".dial").knob({
 	min: 0,
 	max: 1440,
-	width: 330,
-	height: 330,
+	width: 380,
+	height: 380,
 	lineCap: "round",
 	cursor: true,
 	fgColor: "#999",

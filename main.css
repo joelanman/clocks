@@ -85,9 +85,7 @@ input{
 }
 
 .clockWrap{
-	height: 100%;
 	float: left;
-	width: 50%;
 	background: #336;
 	color: #FFF;
 	text-align: center;
@@ -109,28 +107,31 @@ input{
 	opacity: 0.5;
 }
 
-.clocks_1 .clockWrap{
-	width: 100%;
-	height: 100%;
-	font-size: 200%;
-}
+@media all and (min-width: 800px) {
 
-.clocks_2 .clockWrap{
-	width: 50%;
-	height: 100%;
-	font-size: 120%;
-}
+	.clocks_1 .clockWrap{
+		width: 100%;
+		height: 100%;
+		font-size: 200%;
+	}
 
-.clocks_3 .clockWrap{
-	width: 33.33%;
-	height: 100%;
-	font-size: 80%;
-}
+	.clocks_2 .clockWrap{
+		width: 50%;
+		height: 100%;
+		font-size: 120%;
+	}
 
-.clocks_4 .clockWrap{
-	width: 25%;
-	height: 100%;
-	font-size: 70%;
+	.clocks_3 .clockWrap{
+		width: 33.33%;
+		height: 100%;
+		font-size: 80%;
+	}
+
+	.clocks_4 .clockWrap{
+		width: 25%;
+		height: 100%;
+		font-size: 70%;
+	}
 }
 
 .clockWrap:hover .remove{
@@ -147,10 +148,12 @@ input{
 
 .clock .time{
 	font-size: 9em;
+	cursor: pointer;
 }
 
 .clock .location{
 	font-size: 4em;
+	cursor: pointer;
 }
 
 .clock span{
@@ -238,4 +241,10 @@ input{
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
 	text-align: center;
+}
+
+@media all and (max-width: 799px) {
+	.clockWrap{
+		float:none;
+	}
 }
