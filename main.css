@@ -107,32 +107,30 @@ input{
 	opacity: 0.5;
 }
 
-@media all and (min-width: 800px) and (orientation: landscape) {
-
-	.clocks_1 .clockWrap{
-		width: 100%;
-		height: 100%;
-		font-size: 200%;
-	}
-
-	.clocks_2 .clockWrap{
-		width: 50%;
-		height: 100%;
-		font-size: 120%;
-	}
-
-	.clocks_3 .clockWrap{
-		width: 33.33%;
-		height: 100%;
-		font-size: 80%;
-	}
-
-	.clocks_4 .clockWrap{
-		width: 25%;
-		height: 100%;
-		font-size: 70%;
-	}
+.clocks_1 .clockWrap{
+	width: 100%;
+	height: 100%;
+	font-size: 200%;
 }
+
+.clocks_2 .clockWrap{
+	width: 50%;
+	height: 100%;
+	font-size: 120%;
+}
+
+.clocks_3 .clockWrap{
+	width: 33.33%;
+	height: 100%;
+	font-size: 80%;
+}
+
+.clocks_4 .clockWrap{
+	width: 25%;
+	height: 100%;
+	font-size: 70%;
+}
+
 
 .clockWrap:hover .remove{
 	display: block;
