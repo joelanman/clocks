@@ -123,12 +123,23 @@ input{
 	width: 33.33%;
 	height: 100%;
 	font-size: 80%;
+	letter-spacing: -0.01rem;
 }
 
 .clocks_4 .clockWrap{
 	width: 25%;
 	height: 100%;
 	font-size: 70%;
+}
+
+.clocks_1 .time,
+.clocks_2 .time{
+	letter-spacing: -0.6rem;
+}
+
+.clocks_3 .location,
+.clocks_4 .location{
+	letter-spacing: -0.01rem;
 }
 
 
@@ -155,7 +166,7 @@ input{
 }
 
 .clock span{
-	margin: 0 -0.1em;
+	margin: 0 -0.05em;
 }
 
 .controlsWrap{
@@ -176,15 +187,15 @@ input{
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
 	background: rgba(255,255,255,0.96);
-	width: 8em;
-	height: 90%;
+	width: 40rem;
+	height: 40rem;
 	color: #999;
 	font-size: 4em;
 	text-align: center;
 }
 
 .controls input{
-	font-size: 1em;
+	font-size: 1.2em;
 	padding: 0.1em;
 	border: none;
 	background: none;
@@ -213,8 +224,10 @@ input{
 
 .clockEdit .now{
 	position: absolute;
-	top: 1em;
-	right: 1em;
+	bottom: -6rem;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+
 	background: #EEE;
 	border-radius: 2em;
 	width: 2em;

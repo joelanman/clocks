@@ -1,3 +1,19 @@
+var cities = [
+	{
+		'name'		: 'London',
+		'difference': 0
+	},
+	{	'name'		: 'New York',
+		'difference': -7
+	},
+	{	'name'		: 'Tokyo',
+		'difference': +8
+	},
+	{	'name'		: 'Paris',
+		'difference': +1
+	}
+]
+
 
 $(".dial").knob({
 	min: 0,
@@ -79,10 +95,19 @@ $('#addClock').on('click touchstart', function(e){
 
 	var $newClock = $($('#clockTemplate').html().trim()).clone();
 
-	$newClock.find('.hours').text('8');
-	$newClock.find('.minutes').text('41');
-	$newClock.find('.location').text('Paris');
+	var totalClocks = $('#clocks .clock').length,
+		date = new Date(),
+		hours = date.getHours(),
+		city = cities[totalClocks],
+		cityHours = hours + city.difference,
+		cityMinutes = date.getMinutes();
 
+	cityHours = (cityHours >= 24) ? cityHours - 24 : cityHours;
+	cityMinutes = (cityMinutes < 10) ? '0' + cityMinutes : cityMinutes;
+
+	$newClock.find('.hours').text(cityHours);
+	$newClock.find('.minutes').text(cityMinutes);
+	$newClock.find('.location').text(city.name);
 
 	$newClock.appendTo('#clocks');
 
