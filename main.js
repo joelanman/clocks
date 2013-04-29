@@ -94,4 +94,24 @@ $('body').on('click touchstart', '.clockWrap .remove', function(e){
 	$(this).closest('.clockWrap').remove();
 	drawClocks();
 
-})
+});
+
+var inactiveTimeout = null;
+
+$('body').on('mousemove', function(e){
+
+	var $buttons = $('.menu,.remove');
+
+	$buttons.show();
+
+	if (inactiveTimeout){
+		clearTimeout(inactiveTimeout);
+	}
+
+	inactiveTimeout = setTimeout(function(){
+
+		$buttons.fadeOut();
+
+	}, 2000);
+
+});
