@@ -19,7 +19,7 @@ $(".dial").knob({
     }
 });
 
-$('body').on('click touchstart', '.clockWrap', function(e){
+$('body').on('click touchstart', '.clockWrap .time', function(e){
 	e.preventDefault();
 
 	if ($(e.target).closest('.remove').length == 1){
@@ -40,7 +40,27 @@ $('body').on('click touchstart', '.clockWrap', function(e){
 	$('.clockDisplay').val(hours + ':' + minutes);
 
 	$('.locationEdit input').val(location);
+	
+	$('.controlsWrap .controls').hide();
+	$('#clockControls').show();
+	$('#controlsWrap').fadeIn('fast');
+});
 
+$('body').on('click touchstart', '.clockWrap .location', function(e){
+	e.preventDefault();
+
+	if ($(e.target).closest('.remove').length == 1){
+		return;
+	}
+
+	var $this = $(this);
+
+	var location = $this.text();
+
+	$('.locationEdit input').val(location);
+
+	$('.controlsWrap .controls').hide();
+	$('#locationControls').show();
 	$('#controlsWrap').fadeIn('fast');
 });
 

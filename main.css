@@ -167,7 +167,8 @@ input{
 	display: none;
 }
 
-.controls{
+.controlsWrap .controls{
+	display: none;
 	z-index: 1000;
 	position: absolute;
 	top: 50%;
