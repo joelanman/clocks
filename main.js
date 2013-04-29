@@ -72,21 +72,9 @@ $('#addClock').on('click touchstart', function(e){
 var drawClocks = function(){
 	var totalClocks = $('#clocks .clock').length;
 
-	if (totalClocks == 1){
-		$('.clockWrap').css({'width':'100%', 'height':'100%'});
-	}
+	$('#clocks').attr('class','clocks')
+				.addClass('clocks_'+totalClocks);
 
-	if (totalClocks == 2){
-		$('.clockWrap').css({'width':'50%', 'height':'100%'});
-	}
-
-	if (totalClocks == 3){
-		$('.clockWrap').css({'width':'33.33%', 'height':'100%'});
-	}
-
-	if (totalClocks == 4){
-		$('.clockWrap').css({'width':'50%', 'height':'50%'});
-	}
 }
 
 $('body').on('click touchstart', '.clockWrap .remove', function(e){
@@ -110,7 +98,7 @@ $('body').on('mousemove', function(e){
 
 	inactiveTimeout = setTimeout(function(){
 
-		$buttons.fadeOut();
+		$('.menu,.remove').fadeOut();
 
 	}, 2000);
 
