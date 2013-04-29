@@ -107,7 +107,7 @@ input{
 	opacity: 0.5;
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 800px) and (orientation: landscape) {
 
 	.clocks_1 .clockWrap{
 		width: 100%;
