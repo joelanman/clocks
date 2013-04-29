@@ -194,11 +194,12 @@ input{
 	width: 2em;
 	height: 2em;
 	display: block;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	letter-spacing: normal;
 	padding: 0.5rem;
 	line-height: 3rem;
 	color: #222;
+	text-align: center;
 }
 
 .clockEdit .dial {
