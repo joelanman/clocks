@@ -1,16 +1,16 @@
 var cities = [
 	{
 		'name'		: 'London',
-		'difference': 0
+		'difference': 1
 	},
 	{	'name'		: 'New York',
-		'difference': -7
+		'difference': -6
 	},
 	{	'name'		: 'Tokyo',
-		'difference': 8
+		'difference': 7
 	},
 	{	'name'		: 'Paris',
-		'difference': 1
+		'difference': 0
 	}
 ]
 
@@ -149,11 +149,16 @@ $('body').on('mousemove', function(e){
 
 });
 
+var date = new Date(),
+	localOffset = date.getTimezoneOffset() / 60;
+
 setInterval(function(){
 
 	var date = new Date(),
-		hours = date.getHours(),
+		hours = date.getHours() + localOffset,
 		minutes = date.getMinutes();
+
+	minutes = (minutes<10) ? '0' + minutes : minutes;
 
 	$('.clock').each(function(){
 
@@ -173,6 +178,8 @@ setInterval(function(){
 
 		$this.find('.hours').text(cityHours);
 		$this.find('.minutes').text(minutes);
+		//var isVisible = ($this.find('.separator').css('visibility') == 'hidden') ? 'visible' : 'hidden';
+		//$this.find('.separator').css({'visibility': isVisible});
 	})
 
 }, 1000);
